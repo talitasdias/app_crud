@@ -1,3 +1,5 @@
+import tkinter.ttk
+
 import customtkinter
 import sqlite3
 from tkinter import *
@@ -40,14 +42,29 @@ funcao_entry.place(x=140, y=200)
 
 salvar_botao = customtkinter.CTkButton(app, text='Salvar', font=font1, fg_color='#03a819', bg_color='#17043d', hover_color='#03a819', corner_radius=20, width=120, cursor='hand2')
 salvar_botao.place(x=70, y=250)
-
 atualizar_botao = customtkinter.CTkButton(app, text='Atualizar', font=font1, fg_color='#b86512', bg_color='#17043d', hover_color='#b86512', corner_radius=20, width=120, cursor='hand2')
 atualizar_botao.place(x=200, y=250)
-
 limpar_botao = customtkinter.CTkButton(app, text='Limpar', font=font1, fg_color='#6e0e53', bg_color='#17043d', hover_color='#6e0e53', corner_radius=20, width=120, cursor='hand2')
 limpar_botao.place(x=70, y=300)
-
 deletar_botao = customtkinter.CTkButton(app, text='Deletar', font=font1, fg_color='#cf061a', bg_color='#17043d', hover_color='#cf061a', corner_radius=20, width=120, cursor='hand2')
 deletar_botao.place(x=200, y=300)
+
+estilo = tkinter.ttk.Style()
+estilo.configure('meuestilo.Treeview', font=font3, rowheight=50)
+estilo.configure('meuestilo.Treeview.Heading', font=font3)
+estilo.layout('meuestilo.Treeview', [('meuestilo.Treeview.treearea', {'sticky': 'nswe'})])
+
+tv = tkinter.ttk.Treeview(frame1, columns=(1, 2, 3, 4), show='headings', style='meuestilo.Treeview')
+tv.heading('1', text='ID')
+tv.column('1', width=105)
+tv.heading('2', text='Nome')
+tv.column('2', width=105)
+tv.heading('3', text='Idade')
+tv.column('3', width=105)
+tv.heading('4', text='Função')
+tv.column('4', width=105)
+
+tv.pack()
+
 
 app.mainloop()
