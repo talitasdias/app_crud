@@ -6,14 +6,15 @@ from tkinter import *
 
 app = customtkinter.CTk()
 app.title('Sistema de Funcionário')
-app.geometry('800x500')
+app.geometry('900x500')
+app.resizable(False, False)
 app.config(bg='#17043d')
 
 font1 = ('Arial', 20, 'bold')
 font2 = ('Arial', 15, 'bold')
 font3 = ('Arial', 12, 'bold')
 
-frame1 = customtkinter.CTkFrame(app, fg_color="#fff", width=450)
+frame1 = customtkinter.CTkFrame(app, fg_color="#fff", width=550)
 frame1.pack(side='right', fill='y')
 
 db = sqlite3.connect('Funcionarios.db')
@@ -117,13 +118,13 @@ estilo.layout('meuestilo.Treeview', [('meuestilo.Treeview.treearea', {'sticky': 
 
 tv = tkinter.ttk.Treeview(frame1, columns=(1, 2, 3, 4), show='headings', style='meuestilo.Treeview')
 tv.heading('1', text='ID')
-tv.column('1', width=105)
+tv.column('1', width=25)
 tv.heading('2', text='Nome')
-tv.column('2', width=105)
+tv.column('2', width=200)
 tv.heading('3', text='Idade')
-tv.column('3', width=105)
+tv.column('3', width=60)
 tv.heading('4', text='Função')
-tv.column('4', width=105)
+tv.column('4', width=200)
 tv.bind('<ButtonRelease-1>', pegar_dado)
 
 tv.pack()
