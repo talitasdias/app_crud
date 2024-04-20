@@ -17,7 +17,7 @@ Para configurar o ambiente e executar a aplicação, siga estas etapas:
 
 1. Clone o repositório para o seu ambiente local:
    ```bash
-   git clone https://github.com/seu-usuario/seu-projeto.git
+   git clone https://github.com/talitasdias/app_crud.git
    
 3. Acesse a pasta do projeto:
    cd app_crud
