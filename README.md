@@ -8,6 +8,8 @@ Bem-vindo ao projeto de aplicação CRUD em Python! Esta é uma aplicação bás
 - Interface gráfica com CustomTkinter e Tkinter para uma experiência de usuário amigável.
 - Estrutura de projeto simples e limpa para facilitar a compreensão e extensão.
 
+![Logo do Projeto](./gif1.gif)
+
 ## Requisitos do Projeto
 - Python 3.x
 - Bibliotecas: `sqlite3`, `customtkinter`, `tkinter`
