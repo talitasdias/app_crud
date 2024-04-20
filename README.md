@@ -20,13 +20,16 @@ Para configurar o ambiente e executar a aplicação, siga estas etapas:
    git clone https://github.com/talitasdias/app_crud.git
    
 3. Acesse a pasta do projeto:
+   ```bash
    cd app_crud
    
 5. (Opcional) Recomenda-se criar um ambiente virtual para instalar as dependências:
+   ```bash
    python -m venv venv
    source venv/bin/activate  # Para Linux/macOS
    venv\Scripts\activate  # Para Windows
 
 7. Instale as dependências necessárias:
+   ```bash
    pip install customtkinter tkinter sqlite3
    
